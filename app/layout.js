@@ -1,4 +1,5 @@
 import Header from "@/app/_components/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { Josefin_Sans } from 'next/font/google';
 
@@ -33,6 +34,7 @@ function RootLayout({ children }) {
           <ReservationProvider>
             {children}
           </ReservationProvider>
+          <SpeedInsights />
         </main>
       </div>
 
