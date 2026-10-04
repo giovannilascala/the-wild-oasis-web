@@ -1,0 +1,16 @@
+{
+  "name": "dispensa-matematica-30062",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@vscode/markdown-it-katex": "^1.1.0",
+    "katex": "^0.16.11",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-container": "^4.0.0",
+    "playwright-core": "^1.47.0"
+  }
+}

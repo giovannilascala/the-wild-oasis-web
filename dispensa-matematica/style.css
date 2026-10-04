@@ -1,0 +1,69 @@
+:root {
+  --ink: #1b1f24;
+  --muted: #5b6470;
+  --rule: #d8dde3;
+  --accent: #0b4f8a;
+  --teoria: #0b4f8a;
+  --metodo: #1f7a4d;
+  --trappola: #b3261e;
+  --esercizio: #6a3fa0;
+  --soluzione: #4a5563;
+  --nota: #9a6700;
+}
+@page { size: A4; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: "Charter", "Georgia", "Times New Roman", serif;
+  font-size: 10.6pt;
+  line-height: 1.45;
+  color: var(--ink);
+  background: #fff;
+  margin: 0;
+  hyphens: auto;
+  text-align: justify;
+}
+.chapter { break-before: page; }
+.chapter:first-child { break-before: auto; }
+h1, h2, h3, h4 { font-family: "Helvetica Neue", Arial, sans-serif; text-align: left; hyphens: none; break-after: avoid; }
+h1 { font-size: 21pt; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 4pt; margin: 0 0 12pt; }
+h2 { font-size: 14pt; color: var(--accent); margin: 18pt 0 6pt; }
+h3 { font-size: 11.5pt; margin: 13pt 0 4pt; }
+h4 { font-size: 10.6pt; margin: 10pt 0 3pt; color: var(--muted); }
+p { margin: 0 0 6pt; }
+ul, ol { margin: 0 0 6pt; padding-left: 18pt; }
+li { margin-bottom: 2pt; }
+a { color: var(--accent); text-decoration: none; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt; font-size: 9pt; text-align: left; break-inside: auto; }
+th, td { border: 1px solid var(--rule); padding: 3pt 5pt; vertical-align: top; }
+th { background: #eef2f6; font-family: "Helvetica Neue", Arial, sans-serif; }
+tr { break-inside: avoid; }
+code { font-size: 9pt; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 12pt 0; }
+.katex { font-size: 1.04em; }
+.katex-display { margin: 6pt 0; overflow-x: auto; overflow-y: hidden; }
+
+.box { border-left: 3.5pt solid var(--c); background: color-mix(in srgb, var(--c) 6%, white); padding: 6pt 9pt 3pt; margin: 8pt 0 10pt; break-inside: avoid; border-radius: 0 3pt 3pt 0; }
+.box-title { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 9pt; letter-spacing: .02em; color: var(--c); margin-bottom: 3pt; text-transform: uppercase; }
+.box.teoria { --c: var(--teoria); }
+.box.metodo { --c: var(--metodo); }
+.box.trappola { --c: var(--trappola); }
+.box.esercizio { --c: var(--esercizio); }
+.box.soluzione { --c: var(--soluzione); background: #fafbfc; break-inside: auto; }
+.box.nota { --c: var(--nota); }
+
+/* Copertina */
+.cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; text-align: left; }
+.cover .kicker { font-family: "Helvetica Neue", Arial, sans-serif; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; font-size: 10pt; }
+.cover .title { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 34pt; font-weight: 700; color: var(--accent); line-height: 1.1; margin: 8pt 0; }
+.cover .subtitle { font-size: 14pt; color: var(--ink); margin-bottom: 30pt; }
+.cover .meta { font-size: 10pt; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10pt; }
+
+/* Indice */
+.toc { break-after: page; }
+.toc ol { list-style: none; padding: 0; }
+.toc li.l1 { font-weight: 700; margin-top: 6pt; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10pt; }
+.toc li.l2 { padding-left: 14pt; font-size: 9.5pt; }
+.toc a { color: var(--ink); }
+
+.freq { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 8pt; color: #fff; background: var(--accent); border-radius: 8pt; padding: 1pt 6pt; vertical-align: middle; margin-left: 4pt; }
+.small { font-size: 9pt; color: var(--muted); }
